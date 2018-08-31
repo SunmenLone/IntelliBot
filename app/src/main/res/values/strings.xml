@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IntelliBot</string>
+    <string name="welcome">欢迎你，Sunmen</string>
+    <string name="action_friends">好友</string>
+    <string name="action_news">资讯</string>
+    <string name="action_update">检查更新</string>
+    <string name="action_about">关于</string>
+    <string name="action_logout">注销</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+</resources>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ControlActivity"
+    android:background="@drawable/main_background">
+
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="176dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:src="@mipmap/arrow_leftturn"></ImageView>
+
+        <ImageView
+            android:layout_width="176dp"
+            android:layout_height="30dp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:src="@mipmap/arrow_forward"></ImageView>
+
+        <com.siat.hmc.intellibot.view.MySurfaceView
+            android:layout_width="177dp"
+            android:layout_height="177dp"
+            android:layout_centerVertical="true"
+            android:layout_column="1"
+            android:layout_row="1"
+            ></com.siat.hmc.intellibot.view.MySurfaceView>
+
+        <ImageView
+            android:layout_width="176dp"
+            android:layout_height="30dp"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:src="@mipmap/arrow_backward"></ImageView>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="176dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:src="@mipmap/arrow_rightturn"></ImageView>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center_vertical">
+
+        <com.siat.hmc.intellibot.view.CircleView
+            android:id="@+id/speed_view"
+            android:layout_width="300dp"
+            android:layout_height="300dp"></com.siat.hmc.intellibot.view.CircleView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="#92C1DA"
+            android:textSize="18sp"
+            android:text="SPEED"
+            android:layout_marginTop="166dp"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical|end">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MODE :"
+            android:textSize="18sp"
+            android:textColor="#92C1DA"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="Straight"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/btn_text" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="Circle"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/btn_text" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:text="Zigzag"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/btn_text" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

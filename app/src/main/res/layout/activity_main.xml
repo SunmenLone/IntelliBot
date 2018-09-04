@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity"
+    tools:context=".activity.MainActivity"
     android:clipChildren="false"
     android:orientation="horizontal"
     android:background="@drawable/main_background">
@@ -47,6 +47,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@mipmap/info" />
+        app:srcCompat="@drawable/info" />
 
 </RelativeLayout>

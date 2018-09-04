@@ -12,6 +12,9 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.siat.hmc.intellibot.MyApplication;
+import com.siat.hmc.intellibot.util.DensityUtil;
+
 public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback, Runnable {
 
     private Thread th;
@@ -31,26 +34,28 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
     //固定摇杆背景圆形的X,Y坐标以及半径
 
-
-    private int RockerCircleX = 176;
-
-
-    private int RockerCircleY = 176;
+    private static Context ctx = MyApplication.getInstance();
 
 
-    private int RockerCircleR = 176;
+    private int RockerCircleX = DensityUtil.dp2px(ctx, 88f);
+
+
+    private int RockerCircleY = DensityUtil.dp2px(ctx, 88f);
+
+
+    private int RockerCircleR = DensityUtil.dp2px(ctx, 88f);
 
 
     //摇杆的X,Y坐标以及摇杆的半径
 
 
-    private float SmallRockerCircleX = 176;
+    private float SmallRockerCircleX = DensityUtil.dp2px(ctx, 88f);
 
 
-    private float SmallRockerCircleY = 176;
+    private float SmallRockerCircleY = DensityUtil.dp2px(ctx, 88f);
 
 
-    private float SmallRockerCircleR = 88;
+    private float SmallRockerCircleR = DensityUtil.dp2px(ctx, 44f);;
 
 
     public MySurfaceView(Context context) {

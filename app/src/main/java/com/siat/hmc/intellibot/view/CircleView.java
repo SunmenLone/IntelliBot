@@ -13,6 +13,9 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.siat.hmc.intellibot.MyApplication;
+import com.siat.hmc.intellibot.util.DensityUtil;
+
 public class CircleView extends View {
 
     private int width;
@@ -32,9 +35,11 @@ public class CircleView extends View {
     private RectF outRectF;//用于绘制外层圆
     private RectF innerRectF;//用于绘制内层圆
 
-    private int count = 75;//画count根线
-    private static int outerR = 300;//外部圆环的半径
-    private static int innerR = (int) (300 * 0.618f);//内部圆环的半径
+    private static Context ctx = MyApplication.getInstance();
+
+    private int count = 64;//画count根线
+    private static int outerR = DensityUtil.dp2px(ctx, 136f);//外部圆环的半径
+    private static int innerR = (int) DensityUtil.dp2px(ctx, 136*0.618f);//内部圆环的半径
     private int shortageAngle = 140;//缺失的部分的角度
     private int startAngle;//开始的角度
     private int sweepAngle;//扫过的角度

@@ -1,12 +1,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.siat.hmc.intellibot.MainActivity">
+    tools:context="com.siat.hmc.intellibot.activity.MainActivity">
     <item
         android:id="@+id/action_friends"
         android:orderInCategory="100"
         android:title="@string/action_friends"
-        android:icon="@mipmap/friends"
+        android:icon="@drawable/friends"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_news"

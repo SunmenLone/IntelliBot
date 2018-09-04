@@ -7,4 +7,7 @@
     <string name="action_about">关于</string>
     <string name="action_logout">注销</string>
     <string name="control">Walking Control</string>
+    <string name="reading">Voice Reading</string>
+    <string name="books">Books</string>
+    <string name="songs">Songs</string>
 </resources>

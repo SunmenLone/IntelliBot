@@ -25,13 +25,26 @@
             android:name=".activity.ControlActivity"
             android:label="@string/control"
             android:parentActivityName=".activity.MainActivity"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.siat.hmc.intellibot.activity.MainActivity" />
+        </activity>
         <activity
             android:name=".activity.ReadingActivity"
             android:label="@string/reading"
             android:parentActivityName=".activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.siat.hmc.intellibot.activity.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activity.LanguageActivity"
+            android:label="@string/language"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".activity.MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.siat.hmc.intellibot.activity.MainActivity" />

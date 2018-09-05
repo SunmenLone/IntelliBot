@@ -10,4 +10,7 @@
     <string name="reading">Voice Reading</string>
     <string name="books">Books</string>
     <string name="songs">Songs</string>
+    <string name="language">Language Learning</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

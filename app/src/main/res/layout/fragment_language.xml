@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.LanguageActivity$PlaceholderFragment"
+    android:padding="6dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="28dp"
+        android:orientation="vertical"
+        android:background="@drawable/info_background"
+        android:elevation="2dp">
+
+        <ImageView
+            android:id="@+id/img_view"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:src="@drawable/hamburger"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:id="@+id/word"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            android:text="Hamburger"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:id="@+id/detail"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorWhite"
+                android:textSize="15sp"
+                android:paddingBottom="28dp"/>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical|right"
+        android:layout_alignParentBottom="true"
+        android:elevation="5dp">
+
+        <Button android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/test_text"
+            android:text="测试"
+            android:background="@drawable/test_btn_background"
+            />
+
+        <Button android:layout_width="64dp"
+            android:layout_height="36dp"
+            android:textColor="@color/sound_text"
+            android:text="发音"
+            android:background="@drawable/sound_btn_background"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

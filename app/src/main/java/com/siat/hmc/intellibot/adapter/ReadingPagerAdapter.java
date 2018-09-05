@@ -6,16 +6,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.siat.hmc.intellibot.entity.ReadingItem;
-import com.siat.hmc.intellibot.fragment.PlaceholderFragment;
+import com.siat.hmc.intellibot.fragment.ReadingFragment;
 
 import java.util.ArrayList;
 
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class ReadingPagerAdapter extends FragmentPagerAdapter {
 
     private ArrayList<ReadingItem> books = null;
     private ArrayList<ReadingItem> songs = null;
 
-    public SectionsPagerAdapter(FragmentManager fm) {
+    public ReadingPagerAdapter(FragmentManager fm) {
         super(fm);
         if (books == null) {
             books = new ArrayList<>();
@@ -35,7 +35,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
+        // Return a ReadingFragment (defined as a static inner class below).
 
         Bundle bundle = new Bundle();
         if (position == 0) {
@@ -43,7 +43,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         } else {
             bundle.putParcelableArrayList("data", songs);
         }
-        return PlaceholderFragment.newInstance(position + 1, bundle);
+        return ReadingFragment.newInstance(position + 1, bundle);
     }
 
     @Override

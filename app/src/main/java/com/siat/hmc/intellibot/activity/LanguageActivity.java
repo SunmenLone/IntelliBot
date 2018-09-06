@@ -1,10 +1,12 @@
 package com.siat.hmc.intellibot.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -44,6 +46,11 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_language);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setTitle(R.string.language);
+
         LinearLayout l = (LinearLayout) findViewById(R.id.spinner);
         l.setOnClickListener(this);
 
@@ -61,10 +68,7 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -104,20 +108,16 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
                 break;
             case R.id.previous:
                 cur = mViewPager.getCurrentItem();
-                if (cur > 0) {
-                   next =  (cur - 1) % mViewPager.getChildCount();
+                if (cur - 1 < 0) {
+                    next = mSectionsPagerAdapter.getCount() - 1;
                 } else {
-                    next = mViewPager.getChildCount() - 1;
+                    next = cur - 1;
                 }
                 mViewPager.setCurrentItem(next);
                 break;
             case R.id.next:
                 cur = mViewPager.getCurrentItem();
-                if (cur < (mViewPager.getChildCount() - 1)) {
-                    next =  (cur + 1) % mViewPager.getChildCount();
-                } else {
-                    next = 0;
-                }
+                next =  (cur + 1) % mSectionsPagerAdapter.getCount();
                 mViewPager.setCurrentItem(next);
                 break;
             default:
@@ -125,6 +125,15 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId() == android.R.id.home)
+        {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }

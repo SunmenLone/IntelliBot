@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="6dp"
-    android:paddingHorizontal="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
     android:background="@drawable/listview_background">
 
     <LinearLayout
@@ -13,11 +14,12 @@
         android:background="@drawable/item_background"
         android:gravity="center_vertical"
         android:paddingLeft="32dp"
-        android:paddingVertical="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
         android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical">
@@ -25,7 +27,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Witch Hunt"
                 android:textColor="@color/btn_text"
                 android:textSize="18sp"
                 android:id="@+id/name"/>
@@ -33,7 +34,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="恐怖，独立，冒险，血腥"
                 android:textColor="@color/description_text"
                 android:textSize="13sp"
                 android:layout_marginTop="4dp"
@@ -47,8 +47,10 @@
             android:scaleType="center"
             android:scaleX=".5"
             android:scaleY=".5"
-            android:paddingHorizontal="@dimen/activity_horizontal_margin"
-            android:paddingVertical="8dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:textColor="@color/colorWhite"

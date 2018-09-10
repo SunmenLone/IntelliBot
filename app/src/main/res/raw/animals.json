@@ -1,0 +1,21 @@
+{
+    "animals" : [
+        {"zh" : "牛", "en" : "cow", "name" : "bas_ani_0"},
+        {"zh" : "猫", "en" : "cat", "name" : "bas_ani_1"},
+        {"zh" : "狗", "en" : "dog", "name" : "bas_ani_2"},
+        {"zh" : "恐龙", "en" : "dinosaur", "name" : "bas_ani_3"},
+        {"zh" : "象", "en" : "elephant", "name" : "bas_ani_4"},
+        {"zh" : "鱼", "en" : "fish", "name" : "bas_ani_5"},
+        {"zh" : "狐狸", "en" : "fox", "name" : "bas_ani_6"},
+        {"zh" : "青蛙", "en" : "frog", "name" : "bas_ani_7"},
+        {"zh" : "长颈鹿", "en" : "giraffe", "name" : "bas_ani_8"},
+        {"zh" : "马", "en" : "horse", "name" : "bas_ani_9"},
+        {"zh" : "狮子", "en" : "lion", "name" : "bas_ani_10"},
+        {"zh" : "猴子", "en" : "monkey", "name" : "bas_ani_11"},
+        {"zh" : "猪", "en" : "pig", "name" : "bas_ani_12"},
+        {"zh" : "兔", "en" : "rabbit", "name" : "bas_ani_13"},
+        {"zh" : "鲨鱼", "en" : "shark", "name" : "bas_ani_14"},
+        {"zh" : "羊", "en" : "sheep", "name" : "bas_ani_15"},
+        {"zh" : "虎", "en" : "tiger", "name" : "bas_ani_16"}
+    ]
+}

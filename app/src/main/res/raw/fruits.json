@@ -1,0 +1,15 @@
+{
+    "fruits" : [
+        {"zh" : "苹果", "en" : "apple", "name" : "bas_fru_0"},
+        {"zh" : "香蕉", "en" : "banana", "name" : "bas_fru_1"},
+        {"zh" : "樱桃", "en" : "cherry", "name" : "bas_fru_2"},
+        {"zh" : "葡萄", "en" : "grape", "name" : "bas_fru_3"},
+        {"zh" : "柠檬", "en" : "lemon", "name" : "bas_fru_4"},
+        {"zh" : "桃", "en" : "peach", "name" : "bas_fru_5"},
+        {"zh" : "梨", "en" : "pear", "name" : "bas_fru_6"},
+        {"zh" : "菠萝", "en" : "pineapple", "name" : "bas_fru_7"},
+        {"zh" : "草莓", "en" : "strawberry", "name" : "bas_fru_8"},
+        {"zh" : "番茄", "en" : "tomato", "name" : "bas_fru_9"},
+        {"zh" : "西瓜", "en" : "watermelon", "name" : "bas_fru_10"}
+    ]
+}

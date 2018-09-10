@@ -13,28 +13,15 @@
         android:layout_marginBottom="28dp"
         android:orientation="vertical"
         android:background="@drawable/info_background"
-        android:elevation="2dp">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:scrollbars="none">
+        android:elevation="2dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/img_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="130dp"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:scaleType="centerCrop"
-                    />
-
+                android:orientation="vertical"
+                android:gravity="center">
 
                 <TextView
                     android:layout_marginTop="10dp"
@@ -43,7 +30,8 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:textColor="@color/colorWhite"
-                    android:textSize="24sp"/>
+                    android:text="hahahah"
+                    android:textSize="32sp"/>
 
                 <TextView
                     android:id="@+id/detail"
@@ -51,39 +39,47 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/colorWhite"
-                    android:textSize="15sp"
-                    android:paddingBottom="28dp"/>
+                    android:textSize="20sp"
+                    android:text="hahahah"
+                    android:paddingBottom="32dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:elevation="5dp">
+
+                    <ImageButton
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:scaleX=".618"
+                        android:scaleY=".618"
+                        android:src="@drawable/vocal_open"
+                        android:background="@android:color/transparent"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/cabs_play"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:scaleX=".618"
+                        android:scaleY=".618"
+                        android:background="@drawable/play_background"/>
+
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/img_background"
+                    />
 
             </LinearLayout>
-
-        </ScrollView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_vertical|end"
-        android:layout_alignParentBottom="true"
-        android:elevation="5dp">
-
-        <Button android:layout_width="64dp"
-            android:layout_height="36dp"
-            android:layout_marginRight="10dp"
-            android:textColor="@color/test_text"
-            android:text="测试"
-            android:background="@drawable/test_btn_background"
-            />
-
-        <Button android:layout_width="64dp"
-            android:layout_height="36dp"
-            android:textColor="@color/sound_text"
-            android:text="发音"
-            android:background="@drawable/sound_btn_background"/>
-
 
     </LinearLayout>
 

@@ -1,0 +1,11 @@
+{
+    "eats" : [
+        {"zh" : "鸡", "en" : "chicken", "name" : "bas_eat_0"},
+        {"zh" : "猪", "en" : "pork", "name" : "bas_eat_1"},
+        {"zh" : "羊", "en" : "lamb", "name" : "bas_eat_2"},
+        {"zh" : "鱼", "en" : "fish", "name" : "bas_eat_3"},
+        {"zh" : "蟹", "en" : "prawn", "name" : "bas_eat_4"},
+        {"zh" : "粉面", "en" : "noodles", "name" : "bas_eat_5"},
+        {"zh" : "鸡蛋", "en" : "eggs", "name" : "bas_eat_6"}
+    ]
+}

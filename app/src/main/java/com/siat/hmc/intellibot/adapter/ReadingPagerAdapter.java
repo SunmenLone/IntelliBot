@@ -5,30 +5,54 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.siat.hmc.intellibot.entity.ReadingItem;
+import com.siat.hmc.intellibot.MyApplication;
+import com.siat.hmc.intellibot.R;
+import com.siat.hmc.intellibot.entity.Media;
 import com.siat.hmc.intellibot.fragment.ReadingFragment;
 
+import org.apache.commons.io.IOUtils;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ReadingPagerAdapter extends FragmentPagerAdapter {
 
-    private ArrayList<ReadingItem> books = null;
-    private ArrayList<ReadingItem> songs = null;
+    private ArrayList<Media> books = new ArrayList<>();
+    private ArrayList<Media> songs = new ArrayList<>();
 
     public ReadingPagerAdapter(FragmentManager fm) {
         super(fm);
-        if (books == null) {
-            books = new ArrayList<>();
-            books.add(new ReadingItem("Witch Hunt", "恐怖，独立，冒险，血腥"));
-            books.add(new ReadingItem("Witch Hunt", "恐怖，独立，冒险，血腥"));
-            books.add(new ReadingItem("Witch Hunt", "恐怖，独立，冒险，血腥"));
-        }
 
-        if (songs == null) {
-            songs = new ArrayList<>();
-            songs.add(new ReadingItem("Shadows: Awakening", "角色扮演，动作，暴力，单人"));
-            songs.add(new ReadingItem("Shadows: Awakening", "角色扮演，动作，暴力，单人"));
-            songs.add(new ReadingItem("Shadows: Awakening", "角色扮演，动作，暴力，单人"));
+        try {
+
+            InputStream jsonStream = MyApplication.getInstance().getResources().openRawResource(R.raw.medias);
+            JSONObject jsonObject = new JSONObject(IOUtils.toString(jsonStream, "UTF-8"));
+            JSONArray jsonWords = jsonObject.getJSONArray("medias");
+
+            for (int i = 0; i < jsonWords.length(); i++) {
+                JSONObject jsonWord = jsonWords.getJSONObject(i);
+                Media m = new Media();
+                m.setName(jsonWord.getString("name"));
+                m.setCid(jsonWord.getString("src"));
+                m.setVid(jsonWord.getString("src"));
+                m.setType(jsonWord.getInt("type"));
+                if (m.getType() == 1) {
+                    songs.add(m);
+                } else {
+                    books.add(m);
+                }
+            }
+
+        } catch (IOException ioe) {
+
+        } catch (JSONException je) {
+
+        } catch (Exception e) {
+
         }
     }
 

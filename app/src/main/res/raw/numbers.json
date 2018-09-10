@@ -1,0 +1,14 @@
+{
+    "numbers" : [
+        {"zh" : "零", "en" : "zero", "name" : "bas_num_0"},
+        {"zh" : "一", "en" : "one", "name" : "bas_num_1"},
+        {"zh" : "二", "en" : "two", "name" : "bas_num_2"},
+        {"zh" : "三", "en" : "three", "name" : "bas_num_3"},
+        {"zh" : "四", "en" : "four", "name" : "bas_num_4"},
+        {"zh" : "五", "en" : "five", "name" : "bas_num_5"},
+        {"zh" : "六", "en" : "six", "name" : "bas_num_6"},
+        {"zh" : "七", "en" : "seven", "name" : "bas_num_7"},
+        {"zh" : "八", "en" : "eight", "name" : "bas_num_8"},
+        {"zh" : "九", "en" : "nine", "name" : "bas_num_9"}
+    ]
+}

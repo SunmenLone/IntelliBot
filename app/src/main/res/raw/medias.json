@@ -1,0 +1,14 @@
+{
+    "medias" : [
+        {"src" : "alphabet_song", "type" : 1, "name" : "Alphabet Song"},
+        {"src" : "amazing_grace", "type" : 1, "name" : "Amazing Grace"},
+        {"src" : "animal_fair", "type" : 1, "name" : "Animal Fair"},
+        {"src" : "good_morning", "type" : 1, "name" : "Good Morning"},
+        {"src" : "london_bridge", "type" : 1, "name" : "London Bridge"},
+        {"src" : "my_bonnie", "type" : 1, "name" : "My Bonnie"},
+        {"src" : "oh_susannah", "type" : 1, "name" : "Oh Susannah"},
+        {"src" : "old_mac_donald", "type" : 1, "name" : "Old Mac Donald"},
+        {"src" : "this_old_man", "type" : 1, "name" : "This Old Man"},
+        {"src" : "grimms_fairytales;", "type" : 0, "name" : "Grimms Fairytales"},
+    ]
+}

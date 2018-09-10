@@ -1,6 +1,8 @@
 package com.siat.hmc.intellibot.activity;
 
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.support.v7.app.AppCompatActivity;
 
 import android.support.v4.app.FragmentPagerAdapter;
@@ -39,6 +41,8 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
 
     private TextView lang;
 
+    static private SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+
 
 
     @Override
@@ -61,9 +65,21 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         ImageButton nex = (ImageButton) findViewById(R.id.next);
         nex.setOnClickListener(this);
 
+        String name = "numbers";
+        try {
+            Intent intent = getIntent();
+            if (intent != null && intent.getStringExtra("name") != null) {
+                name = intent.getStringExtra("name");
+                lang.setText(name);
+            }
+        } catch (Exception e) {
+
+        }
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new LanguagePagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter.setDataSourse(name);
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -78,16 +94,25 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public boolean onMenuItemClick(MenuItem item) {
+        Intent intent = new Intent(this, LanguageActivity.class);
         switch (item.getItemId()) {
-            case R.id.zh:
-                lang.setText("Chinese");
+            case R.id.numbers:
+                intent.putExtra("name", "numbers");
                 break;
-            case R.id.en:
-                lang.setText("English");
+            case R.id.animals:
+                intent.putExtra("name", "animals");
+                break;
+            case R.id.fruits:
+                intent.putExtra("name", "fruits");
+                break;
+            case R.id.eats:
+                intent.putExtra("name", "eats");
                 break;
                 default:
                     break;
         }
+        startActivity(intent);
+        finish();
         return false;
     }
 
@@ -136,4 +161,7 @@ public class LanguageActivity extends AppCompatActivity implements View.OnClickL
         return super.onOptionsItemSelected(item);
     }
 
+    public static SoundPool getSoundPool(){
+        return soundPool;
+    }
 }

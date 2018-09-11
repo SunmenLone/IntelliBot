@@ -8,7 +8,6 @@ import android.support.v7.widget.Toolbar;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.siat.hmc.intellibot.R;
@@ -82,7 +81,5 @@ public class ReadingActivity extends AppCompatActivity {
         } catch (Exception e) {
 
         }
-        mediaPlayer.release();
-        mediaPlayer = null;
     }
 }

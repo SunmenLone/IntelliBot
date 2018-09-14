@@ -111,16 +111,19 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
         mViewPager.setPageMargin(DensityUtil.dp2px(this, 48));
 
         RelativeLayout root = (RelativeLayout) findViewById(R.id.main_content);
-//        root.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (event.getAction() != MotionEvent.ACTION_UP) {
-//                    return mView Pager.dispatchTouchEvent(event);
-//                } else {
-//                    return true;
-//                }
-//            }
-//        });
+        root.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return mViewPager.dispatchTouchEvent(event);
+            }
+        });
+
+        root.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -273,6 +276,7 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
             }
 
             mLastOffset = positionOffset;
+
         }
 
 

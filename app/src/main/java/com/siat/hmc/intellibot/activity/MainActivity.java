@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
     private static List<Func> flist =  null;
     private static List<View> list = null;
 
+    private int selected = 0;
+
+    private int lastMotion = -1;
+
+    private boolean rootFlag = false;
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -110,18 +116,17 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
         mViewPager.setOffscreenPageLimit(3);
         mViewPager.setPageMargin(DensityUtil.dp2px(this, 48));
 
-        RelativeLayout root = (RelativeLayout) findViewById(R.id.main_content);
+        final RelativeLayout root = (RelativeLayout) findViewById(R.id.main_content);
         root.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+                if (lastMotion == MotionEvent.ACTION_DOWN && event.getAction() == MotionEvent.ACTION_UP){
+                    rootFlag = true;
+                } else {
+                    rootFlag = false;
+                }
+                lastMotion = event.getAction();
                 return mViewPager.dispatchTouchEvent(event);
-            }
-        });
-
-        root.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
             }
         });
 
@@ -214,12 +219,16 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
         }
 
         @Override
-        public Object instantiateItem(ViewGroup container, final int position) {
-            View view = mFuncList.get(position);
+        public Object instantiateItem(ViewGroup container, int position) {
+            final View view = mFuncList.get(position);
             view.findViewById(R.id.func_layout).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    fs.selectFunc(position);
+                    if (rootFlag) {
+                        rootFlag = false;
+                        return;
+                    }
+                    fs.selectFunc(selected);
                 }
             });
             container.addView(view);
@@ -282,7 +291,7 @@ public class MainActivity extends AppCompatActivity implements FuncSelectInterfa
 
         @Override
         public void onPageSelected(int position) {
-
+            selected = position;
         }
 
         @Override
